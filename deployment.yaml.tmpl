@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {NS_PROJECT}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {NS_PROJECT}
+  template:
+    metadata:
+      labels:
+        app: {NS_PROJECT}
+    spec:
+      containers:
+        - name: {NS_PROJECT}
+          image: {IMAGE}
+          resources:
+            requests:
+              cpu: 10m
+          ports:
+            - containerPort: 3000
+          env:
+            
+            
+ 
