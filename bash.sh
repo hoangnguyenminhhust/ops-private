@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-export PROJPATH=$pwd
+export PROJPATH=$(pwd)
 echo $PROJPATH
 for row in $(jq -c '.[]' version.json); do
   KEY=$(echo "${row}" | jq -r '.KEY')
