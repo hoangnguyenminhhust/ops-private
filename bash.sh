@@ -8,31 +8,31 @@ for row in $(jq -c '.[]' version.json); do
   TYPE=$(echo "${row}" | jq -r '.TYPE')
   echo $KEY $VALUE $TYPE
     if [[ $TYPE == "Custom" ]]; then
-        for file in $PROJPATH/*; do
-            if [[ -f $file ]]; then
-            cat "$file" \
-            | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
-            | awk "{gsub(/{NODEENV}/,\"$K8SNS\")}1" \
-            | awk "{gsub(/{NS_PROJECT}/,\"$NS_PROJECT\")}1" 
-            fi
-        done
+        # for file in $PROJPATH/*; do
+        #     if [[ -f $file ]]; then
+        #     cat "$file" \
+        #     | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
+        #     | awk "{gsub(/{NODEENV}/,\"$K8SNS\")}1" \
+        #     | awk "{gsub(/{NS_PROJECT}/,\"$NS_PROJECT\")}1" 
+        #     fi
+        # done
     elif [[ $TYPE == "Secret" ]]; then
-        for file in $PROJPATH/*; do
-            if [[ -f $file ]]; then
-            cat "$file" \
-            | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
-            | awk "{gsub(/{NODEENV}/,\"$K8SNS\")}1" \
-            | awk "{gsub(/{NS_PROJECT}/,\"$NS_PROJECT\")}1" 
-            fi
-        done
+        # for file in $PROJPATH/*; do
+        #     if [[ -f $file ]]; then
+        #     cat "$file" \
+        #     | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
+        #     | awk "{gsub(/{NODEENV}/,\"$K8SNS\")}1" \
+        #     | awk "{gsub(/{NS_PROJECT}/,\"$NS_PROJECT\")}1" 
+        #     fi
+        # done
     elif [[ $TYPE == "Configmap" ]]; then
-        for file in $PROJPATH/*; do
-            if [[ -f $file ]]; then
-            cat "$file" \
-            | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
-            | awk "{gsub(/{NODEENV}/,\"$K8SNS\")}1" \
-            | awk "{gsub(/{NS_PROJECT}/,\"$NS_PROJECT\")}1" 
-            fi
-        done
+        # for file in $PROJPATH/*; do
+        #     if [[ -f $file ]]; then
+        #     cat "$file" \
+        #     | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
+        #     | awk "{gsub(/{NODEENV}/,\"$K8SNS\")}1" \
+        #     | awk "{gsub(/{NS_PROJECT}/,\"$NS_PROJECT\")}1" 
+        #     fi
+        # done
     fi
 done
