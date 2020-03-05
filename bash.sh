@@ -5,13 +5,13 @@ for row in $(jq -c '.[]' version.json); do
   VALUE=$(echo "${row}" | jq -r '.VALUE')
   TYPE=$(echo "${row}" | jq -r '.TYPE')
   echo $KEY $VALUE $TYPE
-  for file in $PROJPATH/*; do
-    cat "$file" \
-    | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
-    | awk "{gsub(/{NODEENV}/,\"$production\")}1" \
-    | awk "{gsub(/{NS_PROJECT}/,\"$PROJ\")}1" \
-    | echo $PROJPATH
-  done
+#   for file in $PROJPATH/*; do
+#     cat "$file" \
+#     | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
+#     | awk "{gsub(/{NODEENV}/,\"$production\")}1" \
+#     | awk "{gsub(/{NS_PROJECT}/,\"$PROJ\")}1" \
+#     | echo $PROJPATH
+#   done
 done
 
 
