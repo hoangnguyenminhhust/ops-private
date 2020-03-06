@@ -1,4 +1,4 @@
 #!/bin/bash
-echo -r "apiVersion: apps/v1" >>config.yaml
-echo -r "\t metadata:"  >>config.yaml
-echo -r "\t\t namespace:" default >>config.yaml
+echo -e 'apiVersion: apps/v1'>> config.yaml
+echo -e '\t metadata:'>> config.yaml
+echo -e '\t\t namespace: default'>> config.yaml
