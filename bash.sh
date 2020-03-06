@@ -2,7 +2,7 @@
 set -e
 export PROJPATH=$(pwd)
 echo $PROJPATH
-for row in $(jq -c '.key' version.json); do
+for row in $(jq -c '.key[]' version.json); do
   KEY=$(echo "${row}" | jq -r '.KEY')
   VALUE=$(echo "${row}" | jq -r '.VALUE')
   TYPE=$(echo "${row}" | jq -r '.TYPE')
