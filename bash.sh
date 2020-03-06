@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-curl -o project.json http://nsd-api.elove.mobi
+# curl -o project.json http://nsd-api.elove.mobi
 export ENV_NAME=$(jq -r '.name' project.json)
 bash deployment.sh
 for row in $(jq -c '.key[]' project.json); do
