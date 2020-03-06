@@ -8,6 +8,7 @@ for row in $(jq -c '.key.[]' version.json); do
   TYPE=$(echo "${row}" | jq -r '.TYPE')
   echo $KEY $VALUE $TYPE
     if [[ $TYPE == "Custom" ]]; then
+        echo "Custom"
         # for file in $PROJPATH/*; do
         #     if [[ -f $file ]]; then
         #     cat "$file" \
@@ -17,6 +18,7 @@ for row in $(jq -c '.key.[]' version.json); do
         #     fi
         # done
     elif [[ $TYPE == "Secret" ]]; then
+        echo "Secret"
         # for file in $PROJPATH/*; do
         #     if [[ -f $file ]]; then
         #     cat "$file" \
@@ -26,6 +28,7 @@ for row in $(jq -c '.key.[]' version.json); do
         #     fi
         # done
     elif [[ $TYPE == "Configmap" ]]; then
+        echo "Configmap"
         # for file in $PROJPATH/*; do
         #     if [[ -f $file ]]; then
         #     cat "$file" \
