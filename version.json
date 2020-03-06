@@ -1,24 +1,30 @@
-[
-    {
-        "KEY": "AUTHEN_PUB_KEY",
-        "VALUE": "UW8coaa8DcSSCD",
-        "TYPE": "Custom"
-    },
-    {
-        "KEY": "AUTHEN_PUB_KEY",
-        "VALUE": "UW8coaa8DcSSCD",
-        "TYPE": "Configmap"
-    },{
-        "KEY": "AUTHEN_PUB_KEY",
-        "VALUE": "UW8coaa8DcSSCD",
-        "TYPE": "Custom"
-    },{
-        "KEY": "AUTHEN_PUB_KEY",
-        "VALUE": "UW8coaa8DcSSCD",
-        "TYPE": "Configmap"
-    },{
-        "KEY": "AUTHEN_PUB_KEY",
-        "VALUE": "UW8coaa8DcSSCD",
-        "TYPE": "Secret"
-    }
-]
+{
+    "name": "nsd-env",
+    "key": [
+        {
+            "KEY": "AUTHEN_PUB_KEY",
+            "VALUE": "UW8coaa8DcSSCD",
+            "TYPE": "Custom"
+        },
+        {
+            "KEY": "AUTHEN_PUB_KEY",
+            "VALUE": "UW8coaa8DcSSCD",
+            "TYPE": "Configmap"
+        },
+        {
+            "KEY": "AUTHEN_PUB_KEY",
+            "VALUE": "UW8coaa8DcSSCD",
+            "TYPE": "Custom"
+        },
+        {
+            "KEY": "AUTHEN_PUB_KEY",
+            "VALUE": "UW8coaa8DcSSCD",
+            "TYPE": "Configmap"
+        },
+        {
+            "KEY": "AUTHEN_PUB_KEY",
+            "VALUE": "UW8coaa8DcSSCD",
+            "TYPE": "Secret"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+- name: {CONFIG_KEY}
+  valueFrom:
+    configMapKeyRef:
+      name: {ENV_NAME}
+      key: {CONFIG_KEY}
