@@ -6,10 +6,9 @@ export ENV_NAME=$(jq -r '.name' version.json)
 echo $ENV_NAME
 bash deployment.sh
 for row in $(jq -c '.key[]' version.json); do
-  KEY=$(echo "${row}" | jq -r '.KEY')
-  VALUE=$(echo "${row}" | jq -r '.VALUE')
-  TYPE=$(echo "${row}" | jq -r '.TYPE')
-  echo $KEY $VALUE $TYPE
+  export KEY=$(echo "${row}" | jq -r '.KEY')
+  export VALUE=$(echo "${row}" | jq -r '.VALUE')
+  export TYPE=$(echo "${row}" | jq -r '.TYPE')
     if [[ $TYPE == "Custom" ]]; then
         bash custom.sh
     elif [[ $TYPE == "Secret" ]]; then
