@@ -4,6 +4,7 @@ export PROJPATH=$(pwd)
 echo $PROJPATH
 export ENV_NAME=$(jq -r '.name' version.json)
 echo $ENV_NAME
+bash deployment.sh
 for row in $(jq -c '.key[]' version.json); do
   KEY=$(echo "${row}" | jq -r '.KEY')
   VALUE=$(echo "${row}" | jq -r '.VALUE')
