@@ -2,7 +2,7 @@
 echo -e 'apiVersion: apps/v1'>> deployment.yaml.tmpl
 echo -e 'kind: Deployment'>>deployment.yaml.tmpl
 echo -e 'metadata:'>>deployment.yaml.tmpl
-echo -e '\t name: {NS_PROJECT}'>>deployment.yaml.tmpl
+echo -e '\tname: {NS_PROJECT}'>>deployment.yaml.tmpl
 echo -e 'spec:'>>deployment.yaml.tmpl
 echo -e '\treplicas: 1'>>deployment.yaml.tmpl
 echo -e '\tselector:'>>deployment.yaml.tmpl

@@ -29,4 +29,4 @@ for row in $(jq -c '.key[]' version.json); do
         echo -e '\t\t\t\t\t\t\t\t\t\t key: '$KEY>> deployment.yaml.tmpl
     fi
 done
-sed -i $'s/\t/ /g' *.yaml.tmpl
+sed -i $'s/\t/  /g' *.yaml.tmpl
