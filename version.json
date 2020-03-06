@@ -7,12 +7,12 @@
             "TYPE": "Custom"
         },
         {
-            "KEY": "AUTHEN_PUB_KEY",
+            "KEY": "CODNS",
             "VALUE": "UW8coaa8DcSSCD",
             "TYPE": "Configmap"
         },
         {
-            "KEY": "AUTHEN_PUB_KEY",
+            "KEY": "LOGS",
             "VALUE": "UW8coaa8DcSSCD",
             "TYPE": "Custom"
         },
@@ -22,7 +22,7 @@
             "TYPE": "Configmap"
         },
         {
-            "KEY": "AUTHEN_PUB_KEY",
+            "KEY": "AUTHEN_SECRET",
             "VALUE": "UW8coaa8DcSSCD",
             "TYPE": "Secret"
         }
