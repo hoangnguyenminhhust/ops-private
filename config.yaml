@@ -1,6 +1,0 @@
- "apiVersion: apps/v1" 
- "\t metadata:"  
- "\t\t namespace:" default 
--r "apiVersion: apps/v1" 
--r  "\t metadata:"  
--r  "\t\t namespace:" default 
