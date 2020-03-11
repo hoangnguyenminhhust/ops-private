@@ -1,5 +1,5 @@
 {
-    "name": "nsd-env",
+    "name_project": "nsd-env",
     "key": [
         {
             "KEY": "AUTHEN_PUB_KEY",
