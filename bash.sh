@@ -5,7 +5,7 @@ export PROJECT_NAME=$(jq -r '.name_project' project.json)
     bash deployment.sh
 if [[ $PROJECT_NAME =~ 'api-gateway' ]]; then
     bash service.sh
-
+fi
 for row in $(jq -c '.key[]' project.json); do
     KEY=$(echo "${row}" | jq -r '.key')
     VALUE=$(echo "${row}" | jq -r '.value')
