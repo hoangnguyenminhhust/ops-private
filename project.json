@@ -2,24 +2,46 @@
     "name_project": "nsd-api-gateway",
     "key": [
         {
-            "KEY": "AUTHEN_PUB_KEY",
-            "VALUE": "UW8coaa8DcSSCD",
-            "TYPE": "Custom"
+            "key": "NODE_ENV",
+            "VALUE": "3000",
+            "TYPE": "Custom",
+            "k8s_name_key": "none"
+
         },
         {
-            "KEY": "AUTHORIZATION_PUB_KEY",
-            "VALUE": "UW8coaa8DcSSCD",
-            "TYPE": "Configmap"
+            "key": "AUTHORIZATION_PUBLIC_KEY",
+            "value": "UW8coaa8DcSSCD",
+            "type": "Secret",
+            "k8s_name_key": "nsa-iam"
         },
         {
-            "KEY": "AWS_S3_AUTHEN_LINK",
-            "VALUE": "UW8coaa8DcSSCD",
-            "TYPE": "Custom"
+            "key": "AUTHORIZATION_PRIVATE_KEY",
+            "value": "XIUjkajshduw23AE",
+            "type": "Secret",
+            "k8s_name_key": "nsa-iam"
         },
         {
-            "KEY": "AUTHEN_SECRET",
-            "VALUE": "UW8coaa8DcSSCD",
-            "TYPE": "Secret"
+            "KEY": "AWS_S3_AUTHEN_SECRET",
+            "VALUE": "iwauil82Wd82",
+            "TYPE": "Secret",
+            "k8s_name_key": "aws-s3"
+        },
+        {
+            "KEY": "AWS_S3_AUTHEN_PUBLIC",
+            "VALUE": "awdsadw12dawd",
+            "TYPE": "Secret",
+            "k8s_name_key": "aws-s3"
+        },
+        {
+            "key": "REGISTRY_LINK_DEV",
+            "value": "http:nexus.nextpos.vn/dev",
+            "type": "Configmap",
+            "k8s_name_key": "registry"
+        }, {
+            "key": "REGISTRY_LINK_PROD",
+            "value": "http:nexus.nextpos.vn/prod",
+            "type": "Configmap",
+            "k8s_name_key": "registry"
         }
     ]
 }
