@@ -3,7 +3,7 @@ set -e
 # curl -o project.json http://nsd-api.elove.mobi
 export PROJECT_NAME=$(jq -r '.name_project' project.json)
 bash deployment.sh
-if [[$PROJECT_NAME =~ 'api-gateway']] then
+if [[$PROJECT_NAME =~ 'api-gateway']]; then
     bash service.sh
 fi
 for row in $(jq -c '.key[]' project.json); do
