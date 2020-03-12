@@ -3,8 +3,8 @@
     "key": [
         {
             "key": "NODE_ENV",
-            "VALUE": "3000",
-            "TYPE": "Custom",
+            "value": "3000",
+            "type": "Custom",
             "k8s_name_key": "none"
 
         },
@@ -21,15 +21,15 @@
             "k8s_name_key": "nsa-iam"
         },
         {
-            "KEY": "AWS_S3_AUTHEN_SECRET",
-            "VALUE": "iwauil82Wd82",
-            "TYPE": "Secret",
+            "key": "AWS_S3_AUTHEN_SECRET",
+            "value": "iwauil82Wd82",
+            "type": "Secret",
             "k8s_name_key": "aws-s3"
         },
         {
-            "KEY": "AWS_S3_AUTHEN_PUBLIC",
-            "VALUE": "awdsadw12dawd",
-            "TYPE": "Secret",
+            "key": "AWS_S3_AUTHEN_PUBLIC",
+            "value": "awdsadw12dawd",
+            "type": "Secret",
             "k8s_name_key": "aws-s3"
         },
         {
