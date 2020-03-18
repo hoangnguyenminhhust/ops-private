@@ -1,5 +1,8 @@
 {
     "name_project": "nsd-api-gateway",
+    "service":true , 
+    "ingress": true ,
+    "replicas": 3, // default 1
     "key": [
         {
             "key": "NODE_ENV",
