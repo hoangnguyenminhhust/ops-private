@@ -4,7 +4,7 @@ set -e
 NAME_PROJECT=$1
 REPLICAS=$2
 
-echo -e '---'>> deployment.yaml.tmpl
+echo -e '---'> deployment.yaml.tmpl
 echo -e 'apiVersion: apps/v1'>> deployment.yaml.tmpl
 echo -e 'kind: Deployment'>> deployment.yaml.tmpl
 echo -e 'metadata:'>> deployment.yaml.tmpl
