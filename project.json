@@ -1,5 +1,5 @@
 {
-    "name_project": "nsd-api-gateway",
+    "name_project": "nsd-env",
     "service":true , 
     "ingress": true ,
     "replicas": 3, 

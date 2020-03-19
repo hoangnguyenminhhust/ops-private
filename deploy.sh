@@ -31,19 +31,19 @@ ${ROOT}/get-container-image-name.sh $NS_PROJECT $NPM_VERSION $CWD
 # APPLY deployments
 if [[ $K8SNS == 'production' ]]; then
   aws eks --region ap-southeast-1 update-kubeconfig --name $K8SCLUSTER
-      cat "./deployment.yaml.tmpl" \
+      cat "./deployment.yaml" \
       | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
       | kubectl apply -f -
 
 elif [[ $K8SNS == 'develop' ]]; then
   kubectl config use-context do-sgp1-ns-dev-k8s-1-14
-    cat "./deployment.yaml.tmpl" \
+    cat "./deployment.yaml" \
     | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
     | kubectl apply -f -
 
 elif [[ $K8SNS == 'staging' ]]; then
   kubectl config use-context do-sgp1-ns-k8s-staging
-    cat "./deployment.yaml.tmpl" \
+    cat "./deployment.yaml" \
     | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
     | kubectl apply -f -
 fi
