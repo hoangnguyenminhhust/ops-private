@@ -23,7 +23,7 @@ echo -e '\t\t\tcontainers:'>> deployment.yaml.tmpl
 echo -e '\t\t\t\t- name: '$NAME_PROJECT>> deployment.yaml.tmpl
 echo -e '\t\t\t\t\timage: {IMAGE}'>> deployment.yaml.tmpl
 echo -e '\t\t\t\t\tresources:'>> deployment.yaml.tmpl
-echo -e '\r\r\t\t\t\trequests:'>> deployment.yaml.tmpl
+echo -e '\t\t\t\t\t\trequests:'>> deployment.yaml.tmpl
 echo -e '\t\t\t\t\t\t\tcpu: 10m'>> deployment.yaml.tmpl
 echo -e '\t\t\t\t\tports:'>> deployment.yaml.tmpl
 echo -e '\t\t\t\t\t\t- containerPort: 3000'>> deployment.yaml.tmpl
