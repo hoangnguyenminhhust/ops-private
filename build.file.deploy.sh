@@ -10,16 +10,19 @@ export INGRESS=$(jq -r '.ingress' project.json)
 export SERVICE=$(jq -r '.service' project.json)
 export REPLICAS=$(jq -r '.replicas' project.json)
 
-./deployment.sh $NAME_PROJECT $REPLICAS
 
 if [[ "$SERVICE"  == "true" ]]; then
     ./service.sh $NAME_PROJECT
+    echo "Build service"
 fi
 
 if [[ "$INGRESS"  == "true" ]]; then
     ./ingress.sh
+    echo "Build ingress"
 fi
 
+    ./deployment.sh $NAME_PROJECT $REPLICAS
+    echo "Build deployment"
 for row in $(jq -c '.key[]' project.json); do
     KEY=$(echo "${row}" | jq -r '.key')
     VALUE=$(echo "${row}" | jq -r '.value')

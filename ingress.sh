@@ -4,7 +4,7 @@ set -e
 NAME_PROJECT=$1
 HOST_NAME=$2
 
-echo -e '---'>> ingress.yaml
+echo -e '---'> ingress.yaml
 echo -e 'apiVersion: extensions/v1beta1'>> ingress.yaml
 echo -e 'kind: Ingress'>> ingress.yaml
 echo -e 'metadata:'>> ingress.yaml

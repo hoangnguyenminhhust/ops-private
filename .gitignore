@@ -1,2 +1,2 @@
-*.yaml.tmpl
-project.json
+./*.yaml
+./project.json

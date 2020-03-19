@@ -47,3 +47,6 @@ elif [[ $K8SNS == 'staging' ]]; then
     | awk "{gsub(/{IMAGE}/,\"$IMAGE\")}1" \
     | kubectl apply -f -
 fi
+
+echo "Delete yaml file"
+rm -f ./*.yaml
