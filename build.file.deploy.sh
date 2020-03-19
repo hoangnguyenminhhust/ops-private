@@ -39,4 +39,4 @@ for row in $(jq -c '.key[]' project.json); do
 
     fi
 done
-sed -i $'s/\t/  /g' *.yaml.tmpl
+sed -i $'s/\t/  /g' *.yaml
