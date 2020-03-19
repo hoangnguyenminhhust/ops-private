@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-URL=$1
+# URL=$1
 
-curl -o project.json $URL
+# curl -o project.json $URL
 
 export NAME_PROJECT=$(jq -r '.name_project' project.json)
 export INGRESS=$(jq -r '.ingress' project.json)
