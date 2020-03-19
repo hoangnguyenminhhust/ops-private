@@ -1,0 +1,56 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nsd-api-gateway
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nsd-api-gateway
+  template:
+    metadata:
+      labels:
+        app: nsd-api-gateway
+    spec:
+      containers:
+        - name: nsd-api-gateway
+          image: 067796362593.dkr.ecr.ap-southeast-1.amazonaws.com/nsd-api-gateway:ca261f09ad10735cb15b92615005abc6df4d8def
+          resources:
+            requests:
+              cpu: 10m
+          ports:
+            - containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: "3000"
+            - name: AUTHORIZATION_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: nsa-iam
+                  key: AUTHORIZATION_PUBLIC_KEY
+            - name: AUTHORIZATION_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: nsa-iam
+                  key: AUTHORIZATION_PRIVATE_KEY
+            - name: AWS_S3_AUTHEN_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: aws-s3
+                  key: AWS_S3_AUTHEN_SECRET
+            - name: AWS_S3_AUTHEN_PUBLIC
+              valueFrom:
+                secretKeyRef:
+                  name: aws-s3
+                  key: AWS_S3_AUTHEN_PUBLIC
+            - name: REGISTRY_LINK_DEV
+              valueFrom:
+                secretKeyRef:
+                  name: registry
+                  key: REGISTRY_LINK_DEV
+            - name: REGISTRY_LINK_PROD
+              valueFrom:
+                secretKeyRef:
+                  name: registry
+                  key: REGISTRY_LINK_PROD
