@@ -1,4 +1,4 @@
-{
+[{
     "name_project": "nsd-env",
     "service":true , 
     "ingress": true ,
@@ -9,7 +9,6 @@
             "value": "3000",
             "type": "Custom",
             "k8s_name_key": "none"
-
         },
         {
             "key": "AUTHORIZATION_PUBLIC_KEY",
@@ -40,11 +39,12 @@
             "value": "http:nexus.nextpos.vn/dev",
             "type": "Configmap",
             "k8s_name_key": "registry"
-        }, {
+        },
+        {
             "key": "REGISTRY_LINK_PROD",
             "value": "http:nexus.nextpos.vn/prod",
             "type": "Configmap",
             "k8s_name_key": "registry"
         }
     ]
-}
+}]

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-# URL=$1
+URL=$1
 
-# curl -o project.json $URL
+curl -o project.json $URL
 
 export NAME_PROJECT=$(jq -r '.name_project' project.json)
 export INGRESS=$(jq -r '.ingress' project.json)
@@ -14,11 +14,6 @@ export REPLICAS=$(jq -r '.replicas' project.json)
 if [[ "$SERVICE"  == "true" ]]; then
     ./service.sh $NAME_PROJECT
     echo "Build service"
-fi
-
-if [[ "$INGRESS"  == "true" ]]; then
-    ./ingress.sh
-    echo "Build ingress"
 fi
 
     ./deployment.sh $NAME_PROJECT $REPLICAS

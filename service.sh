@@ -4,7 +4,7 @@ set -e
 NAME_PROJECT=$1
 
 echo -e '---'> service.yaml
-echo -e 'apiVersion: apps/v1'>>  service.yaml
+echo -e 'apiVersion: v1'>>  service.yaml
 echo -e 'kind: Service'>> service.yaml
 echo -e 'metadata:'>> service.yaml
 echo -e '\tname: '$NAME_PROJECT>> service.yaml
